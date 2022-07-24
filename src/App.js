@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { UserInputs } from './InputUser';
+import Home from './pages/home/Home' ;
+import List from './pages/list/List';
+import NewUser from './pages/newUser/NewUser';
+import Single from './pages/single/Single';
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          
+          <Route path='/'>
+
+            <Route index element={<Home />} />
+            
+            <Route path="users">
+              <Route index element={<List />} />
+              <Route path=":userId" element={< Single />} />
+              <Route path="new" element={< NewUser title= "Ajouter Nouveau Utilisateur" inputs={UserInputs} />} />
+            </Route>
+
+          </Route>
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

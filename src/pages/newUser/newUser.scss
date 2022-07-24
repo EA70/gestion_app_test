@@ -1,0 +1,106 @@
+.newUser {
+  
+    .position__component {
+        padding: 20px;
+        position: relative;
+        width: 100%;
+    
+    
+        position: absolute;
+        width: calc(100% - 280px);
+        right: 0;
+        top: 55px;
+    }
+    .newContainer {
+
+        h1 {
+            color: lightgray;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .top__title,
+        .content__ajouter {
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+            padding: 10px;
+            margin: 30px;
+        }
+
+
+        .content__ajouter {
+            display: flex;
+            justify-content: space-around;
+            width: auto;
+            padding: 80px 30px;
+
+            .gauche {
+                text-align: center;
+                
+                img {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
+            .droite {
+                position: relative;
+
+
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+
+                    .formInput {
+                        width: 40%;
+
+                        label {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            margin-bottom: 10px;
+                            
+                            .icon {
+                                cursor: pointer;
+                            }
+                        }
+
+                        input {
+                            width: 100%;
+                            padding: 5px;
+                            border: none;
+                            border-bottom: 1px solid gray;
+                            padding: 10px 8px;
+                            margin-bottom: 15px;
+
+                            &:active {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+
+                button {
+                    width: 150px;
+                    text-align: center;
+                    border: none;
+                    padding: 15px;
+                    background: teal;
+                    color: white;
+                    font-weight: bold;
+                    cursor: pointer;
+                    margin-top: 30px;
+
+                    position: absolute;
+                    bottom: -45px;
+                    right: 70px;
+                }
+            }
+
+
+        }
+    }
+}

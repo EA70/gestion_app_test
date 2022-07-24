@@ -1,0 +1,103 @@
+$color : #FF6699;
+$colorHover : #ff669986 ;
+$TextColor : #999999;
+
+.single {
+    display: flex;
+
+
+    h1 {
+        color: $TextColor;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .position__component {
+        padding: 20px;
+        position: relative;
+        width: 100%;
+    
+        overflow-y: hidden;
+    
+        position: absolute;
+        width: calc(100% - 280px);
+        right: 0;
+        top: 55px;
+
+
+        .bas {
+            -webkit-box-shadow : 2px 4px 10px 1px rgba(0,0,0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+            padding: 20px;
+        }
+        
+    }
+
+    .head {
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+
+        .gauche {
+            flex: 1;
+            -webkit-box-shadow : 2px 4px 10px 1px rgba(0,0,0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201, 0.47);
+            padding: 20px;
+            position: relative;
+
+            .editButton {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: 5px;
+                font-size: 12px;
+                color: bisque;
+                background-color: black;
+                cursor: pointer;
+                border-radius: 0px 0px 0px 5px;
+            }
+
+            .item {
+                display: flex;
+                gap: 20px;
+
+                .itemImg {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-top: 10px;
+                }
+
+                .details {
+                    .itemTitle {
+                        margin-top: 10px;
+                        margin-bottom: 10px;
+                        color: rgb(0, 0, 0);
+                    }
+                    .detailItem {
+                        margin-bottom: 10px;
+                        font-size: 14px;
+
+                        .itemKey {
+                            font-weight: bold;
+                            color: gray;
+                            margin-right: 5px;
+                        }
+
+                        .itemValue {
+                            font-weight: 300;
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        .droite {
+            flex: 2;
+        }
+
+
+    }
+}
